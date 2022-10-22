@@ -1,0 +1,27 @@
+target/
+
+# VSC files
+**/.classpath
+**/.factorypath
+**/.project
+**/.settings
+
+# NetBeans configuration
+**/nb-configuration.xml
+**/nbproject/
+**/*.NavData
+
+# IntelliJ IDEA
+.idea/
+**/*.iml
+
+# System dependent scripts
+**/*.sh
+**/*.bat
+
+# Log files
+**/*.log
+# gzipped archives
+**/*.gz
+
+# Project specific files
