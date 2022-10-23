@@ -4,7 +4,7 @@ import java.util.Arrays;
 
 public record SolutionClassDescription(Class<?> targetClass, String fieldName, FieldModifier[] modifiers) {
 
-    SolutionClassDescription(Class<?> targetClass) {
+    public SolutionClassDescription(Class<?> targetClass) {
         this(targetClass, null, null);
     }
 

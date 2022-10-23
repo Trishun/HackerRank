@@ -10,6 +10,8 @@ import java.util.List;
 import org.junit.jupiter.api.AfterAll;
 import org.junit.jupiter.api.BeforeAll;
 
+import static org.assertj.core.api.Assertions.assertThat;
+
 public abstract class HackerRankTest {
 
     @BeforeAll
@@ -23,6 +25,11 @@ public abstract class HackerRankTest {
         System.setOut(originalOut);
         System.setErr(originalErr);
         System.setIn(originalIn);
+    }
+
+    protected void simpleAssert(List<String> input, List<String> expected) {
+        var result = invoke(input);
+        assertThat(result).containsExactlyElementsOf(expected);
     }
 
     protected List<String> invoke(List<String> input) {
