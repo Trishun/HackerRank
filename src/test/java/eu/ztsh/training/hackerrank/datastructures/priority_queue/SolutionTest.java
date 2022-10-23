@@ -7,7 +7,7 @@ import eu.ztsh.training.hackerrank.SolutionClassDescription.FieldModifier;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
 
-@DisplayName("HackerRank chalenges: Java Priority Queue")
+@DisplayName("HackerRank challenges: Java Priority Queue")
 class SolutionTest extends HackerRankTest {
 
     @Test
