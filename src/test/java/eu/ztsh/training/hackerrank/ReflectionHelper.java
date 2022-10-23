@@ -10,6 +10,7 @@ import eu.ztsh.training.hackerrank.SolutionClassDescription.FieldModifier;
 
 public class ReflectionHelper {
 
+    // https://stackoverflow.com/a/56043252
     static {
         try {
             var lookup = MethodHandles.privateLookupIn(Field.class, MethodHandles.lookup());
