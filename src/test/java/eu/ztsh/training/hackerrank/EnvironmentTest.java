@@ -1,5 +1,8 @@
 package eu.ztsh.training.hackerrank;
 
+import java.io.BufferedReader;
+import java.io.IOException;
+import java.io.InputStreamReader;
 import java.util.List;
 import java.util.Scanner;
 import eu.ztsh.training.hackerrank.SolutionClassDescription.FieldModifier;
@@ -86,6 +89,17 @@ public class EnvironmentTest {
 
     }
 
+    @Nested
+    @DisplayName("Test with BufferedReader created in main(String[]) method")
+    class EnvironmentReaderTest extends HackerRankEnvironmentTest {
+
+        @Override
+        protected SolutionClassDescription getSolutionClassDescription() {
+            return new SolutionClassDescription(SampleSolutionWithInlineBufferedReader.class);
+        }
+
+    }
+
 }
 
 class SampleSolutionWithPrivateStaticScanner {
@@ -120,6 +134,19 @@ class SampleSolutionWithInlineScanner {
         while (scan.hasNext()) {
             System.out.println(scan.nextLine());
         }
+    }
+
+}
+
+class SampleSolutionWithInlineBufferedReader {
+
+    public static void main(String... args) throws IOException {
+        var bufferedReader = new BufferedReader(new InputStreamReader(System.in));
+        String line = bufferedReader.readLine();
+        do {
+            System.out.println(line);
+            line = bufferedReader.readLine();
+        } while (line != null);
     }
 
 }
